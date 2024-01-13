@@ -57,7 +57,7 @@ export function NewTodoForm({ onSubmit, edit, type, closeEditDialog }) {
     <>
     <form onSubmit={handleSubmit} className="new-item-form">
       <div className="form-row">
-        <label htmlFor="item">{edit?.title? "Edit Item" : "New Item"}</label>
+        <label htmlFor="item">{editTodoForm ? "Edit Item" : "New Item"}</label>
         <input
           value={newItem.title}
           onChange={e => setValue(e.target.value,"title")}

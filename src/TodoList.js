@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import TodoItem from "./TodoItem";
-import { getTodo } from "./api";
 import TableHeading from "./TableHeading";
 
 export function TodoList({ toggleTodo, deleteTodo, todos, editTodo }) {
