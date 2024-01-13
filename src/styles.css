@@ -5,8 +5,8 @@
 
 body {
   background: #333;
-  color: hsl(200, 100%, 90%);
-  max-width: 400px;
+  color: #CCEEFF;
+  max-width: 600px;
   padding: 1rem;
   margin: 0 auto;
 }
@@ -24,9 +24,9 @@ body {
 }
 
 .btn {
-  background: hsl(200, 100%, 50%, 0.1);
-  border: 1px solid hsl(200, 100%, 50%);
-  color: hsl(200, 100%, 50%);
+  background: #00AAFF03;
+  border: 1px solid #00AAFF;
+  color: #00AAFF;
   padding: 0.25em 0.5em;
   border-radius: 0.25em;
   cursor: pointer;
@@ -35,31 +35,40 @@ body {
 
 .btn:hover,
 .btn:focus-visible {
-  background: hsl(200, 100%, 50%, 0.2);
+  background: #00AAFF05;
 }
 
 .btn.btn-danger {
-  background: hsl(0, 100%, 40%, 0.1);
-  border: 1px solid hsl(0, 100%, 40%);
-  color: hsl(0, 100%, 40%);
+  background: #CC000003;
+  border: 1px solid #CC0000;
+  color: #CC0000;
 }
 
 .btn.btn-danger:hover,
 .btn.btn-danger:focus-visible {
-  background: hsl(0, 100%, 40%, 0.2);
+  background: #CC000005;
 }
 
 .new-item-form input {
   outline: none;
-  border: 1px solid hsl(200, 100%, 40%);
-  background: hsl(200, 100%, 30%);
+  border: 1px solid #0088CC;
+  background: #006699;
   border-radius: 0.25em;
   padding: 0.25em 0.5em;
-  color: hsl(200, 100%, 90%);
+  color: #CCEEFF;
+  margin: 0.5em;
 }
-
+.new-item-form select {
+  outline: none;
+  border: 1px solid #0088CC;
+  background: #006699;
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  color: #CCEEFF;
+  margin: 0.5em;
+}
 .new-item-form input:focus {
-  border: 1px solid hsl(200, 100%, 70%);
+  border: 1px solid #66CCFF;
 }
 
 .header {
@@ -68,73 +77,83 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.list {
-  margin: 0;
-  padding: 0;
-  margin-left: 1rem;
-  list-style: none;
+.section {
+  margin-bottom: 0.3em;
 }
 
-.list li:has(input:checked) label {
-  color: hsl(200, 20%, 40%);
+.section label span {
+  word-wrap: break-word;
+  width: 100px;
 }
 
-.list {
+.section label {
   display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
+  word-wrap: break-word;
+  justify-content: space-between;
+  gap: 0.3em;
 }
 
-.list li {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-}
 
-.list li label {
-  display: flex;
-  gap: 0.25rem;
-  cursor: pointer;
-  align-items: center;
-}
-
-.list li:has(input:focus-visible) label {
-  outline: 1px solid hsl(200, 100%, 50%);
-}
-
-.list li input {
+.section select {
   outline: none;
-  width: 0;
-  height: 0;
-  appearance: none;
-  pointer-events: none;
-  position: absolute;
-}
-
-.list li label::before {
-  content: "";
-  display: block;
-  width: 0.9rem;
-  height: 0.9rem;
-  background: hsl(200, 100%, 90%);
+  border: 1px solid #0088CC;
+  background: #006699;
   border-radius: 0.25em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: #CCEEFF;
 }
 
-.list li label:hover::before {
-  background: hsl(200, 100%, 80%);
+.section-done {
+  text-decoration: line-through;
 }
 
-.list li:has(input:checked) label::before {
-  content: "✔";
-  background: hsl(200, 100%, 40%);
-  color: hsl(200, 100%, 90%);
-  font-size: 0.75rem;
-  font-weight: bold;
+.confirm-pop-up {
+    width: 100vw;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    background: #33333380;
+    max-width: 600px;
+    min-height: 100vh;
+}
+.edit-form{
+    position: relative;
+    top:15em;
+    padding: 0.5em;
+    background: #3C4142;
+    border-radius: 0.5em;
 }
 
-.list li:has(input:checked) label:hover::before {
-  background: hsl(200, 100%, 30%);
+.btn-delete{
+   background-color: #E97451;
+   color: #880808;
+   border: 1px solid #D2042D;
+}
+
+.btn-delete:hover{
+    background-color: #CC5500
+}
+
+.list .btn-none{
+    visibility: hidden;
+}
+
+.back{
+    margin-top: 0.3em;
+}
+
+.placeholder-select :first-child {
+    color:#a1a1a1
+}
+
+.placeholder-select option{
+    color: #ffffff;
+}
+
+.form-row span{
+    margin: 0.5em;
+}
+
+.form-row span{
+    font-size: 0.7em;
+    color: #FF3131;
 }
